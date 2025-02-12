@@ -2,24 +2,24 @@
 export default {
   bootstrap: () => import('./main.server.mjs').then(m => m.default),
   inlineCriticalCss: true,
-  baseHref: './',
+  baseHref: '/invitation/',
   locale: undefined,
   routes: [
   {
     "renderMode": 2,
-    "redirectTo": "/invitacion",
-    "route": "/"
+    "redirectTo": "/invitation/invitacion",
+    "route": "/invitation"
   },
   {
     "renderMode": 2,
-    "route": "/invitacion"
+    "route": "/invitation/invitacion"
   }
 ],
   entryPointToBrowserMapping: undefined,
   assets: {
-    'index.csr.html': {size: 1852, hash: 'ac148c75b6f7199af9268b539ac43b1e574683c2a708a71c1351e6638a279738', text: () => import('./assets-chunks/index_csr_html.mjs').then(m => m.default)},
-    'index.server.html': {size: 2365, hash: 'bed99bbb86357d36bec54aed1cf0d32db9a49790da03a62030e5bee9d31594b7', text: () => import('./assets-chunks/index_server_html.mjs').then(m => m.default)},
-    'invitacion/index.html': {size: 7827, hash: '7774fa074a38ba987dd2e14674637a6efff625ab976daac6e5a1e0a560300f72', text: () => import('./assets-chunks/invitacion_index_html.mjs').then(m => m.default)},
+    'index.csr.html': {size: 1862, hash: '042667b0194c95972118e9e85646c43eb8fed76056d77d76e3d5b63c1bd05d32', text: () => import('./assets-chunks/index_csr_html.mjs').then(m => m.default)},
+    'index.server.html': {size: 2375, hash: '41c1fbf726f3539f430470316f5a045cd6b39f36b96d50cdc0562b9d1f36e10b', text: () => import('./assets-chunks/index_server_html.mjs').then(m => m.default)},
+    'invitacion/index.html': {size: 7837, hash: 'a018fbbb35a5a6cf755604351540331dd99d03c49478db29007021d68ebd9b1b', text: () => import('./assets-chunks/invitacion_index_html.mjs').then(m => m.default)},
     'styles-5INURTSO.css': {size: 0, hash: 'menYUTfbRu8', text: () => import('./assets-chunks/styles-5INURTSO_css.mjs').then(m => m.default)}
   },
 };
