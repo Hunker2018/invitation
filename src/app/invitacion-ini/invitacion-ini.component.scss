@@ -199,3 +199,11 @@
     75% { transform: (0, 100vh); }
     100% { transform: (0, 0); }
   }
+
+  button {
+    position: relative;
+    z-index: 10;
+  }
+  img {
+    z-index: 1;
+  }
