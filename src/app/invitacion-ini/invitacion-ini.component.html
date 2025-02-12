@@ -1,0 +1,101 @@
+<div class="intro-container step-1" *ngIf="currentStep === 1">
+    <h1>Asuuu yo nunca he hecho algo así, que me hiciste xd, bueno dale al botón siguiente para que sigas leyendo
+        lo que te quería decir... 💬</h1>
+    <div class="images">
+        <div class="circle-image"></div>
+        <div class="square-image"></div>
+    </div>
+    <div class="gif-container">
+      <img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExd3FoOTY4MXM5NTk2eG53c3RzanE2eGI1bm10NDk0ZnBqaGNubDRuMiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/kBZ212yGzFaxgkSIKW/giphy.gif" alt="Gif divertido" width="200">
+    </div>
+    <button class="custom-button" (click)="nextStep()">Siguiente ➡️</button>
+  </div>
+  
+  <div class="intro-container step-2" *ngIf="currentStep === 2">
+    <h1>Te estoy poniendo varios pasos solo para hacer mas interesante esto si no te lo ponía todo en una misma pantalla,
+        ah estoy poniendo fotitos de nuestras salidas que tuvimos
+    </h1>
+    <div class="images">
+      <div class="circle-image2"></div>
+      <div class="square-image2"></div>
+    </div>
+    <div class="gif-container">
+        <img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExam8zcnNya2s3Y3RweHM0em5iZXlsaTJ3MnEyOWhwbWl2aDhnd2Y3ZCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/kHIcLOl21xQUbHh9NE/giphy.gif" alt="Gif divertido" width="200">
+    </div>
+    <button class="custom-button" (click)="nextStep()">Siguiente ➡️</button>
+  </div>
+
+  <div class="intro-container step-3" *ngIf="currentStep === 3">
+    <h1>Puse las fotos para que te acuerdes en orden las salidas que tuvimos, aunque creo que no está en orden 
+        pero ya sabes, toy medio tonto, ya falta poco para llegar al último mensaje
+    </h1>
+    <div class="images">
+      <div class="circle-image3"></div>
+      <div class="square-image3"></div>
+    </div>
+    <div class="gif-container">
+        <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExbm5yb2tocWt1OGJhYmFzaHE1OG9ic3NkOGg4YnB1Y3I0NzdtOTQycSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/9x2XZBHuQF8iuuLug1/giphy.gif" alt="Gif divertido" width="200">
+    </div>
+
+    <img [src]="getRandomGif()" class="bouncing-gif" alt="Bouncing GIF">
+    <button class="custom-button" (click)="nextStep()">Siguiente ➡️</button>
+  </div>
+  
+  <div class="intro-container step-4" *ngIf="currentStep === 4">
+    <h1>Me quedé sin palabras xdddd es que tengo que completar las imagenes JAJAJA ya faltan 3 no más
+        PD: El soju estaba buenaso
+    </h1>
+    <div class="images">
+      <div class="circle-image4">🌹</div>
+      <div class="square-image4">🥂</div>
+    </div>
+    <div class="gif-container">
+        <img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExdXI2OTF1ZHd2dTh0ank4MGxrOGk3MmZ0cnlrdjZtdzV0M3ZzNXoyaCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Z5SMZDDtlPgL6/giphy.gif" alt="Gif divertido" width="200">
+    </div>
+    <button class="custom-button" (click)="nextStep()">Siguiente ➡️</button>
+  </div>
+  
+   
+  <div class="intro-container step-5" *ngIf="currentStep === 5">
+    <h1>Te mentí, solo falta 1 mas ya no hay mas fotos. 🐇💗🐻
+        Esto es lo más cercano a una carta hecha a mano pero está programado xd, es virtual
+    </h1>
+    <div class="images">
+      <div class="circle-image5">🌹</div>
+      <div class="square-image5">🥂</div>
+    </div>
+    <div class="gif-container">
+        <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExc3Y1bGxqdzcyMnM4ZjNibmZpbjRjNnVscnU3cHdjaHh2c2Q3ZHJqdCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/wsJHi6a1JwoXC/giphy.gif" alt="Gif divertido" width="200">
+    </div>
+    <button class="custom-button" (click)="nextStep()">Siguiente ➡️</button>
+  </div>
+
+  <div class="intro-container step-6" *ngIf="currentStep === 6">
+    <h1>¿Quieres ser mi San Valentín? Te lo iba a decir el Domingo pero nunca tuvimos un tiempo a solas xd</h1>
+
+    <button class="custom-button" (click)="onYesClick()">Sí, quiero</button>
+    <button class="custom-button" (click)="onNoClick()">Ahora no joven</button>
+  </div>
+
+  <div class="intro-container step-7" *ngIf="currentStep === 7">
+    <h1>Asu como que no :c bueno se intentó xddddddddddd, si cambias de opinión dale al botón</h1>
+
+    <button class="custom-button" (click)="reintentar()">Volver a pensarlo</button>
+    <div class="gif-container">
+        <img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExbTYzeXRtazh0ZGc0bGI3ZmRpamV1Zm92ajQwcmo3bmF4bmJoanRwbiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/AOitRwIgx2wcOxZaIH/giphy.gif" alt="Gif divertido" width="200">
+    </div>
+  </div>
+
+  <div class="intro-container step-8" *ngIf="currentStep === 8">
+    <h1>Una sabia decisión, espero podamos vernos el Viernes, tengo algo para darte y se que te gustará
+        Si quieres volver a ver todo, solo actualiza la página o dale el botón
+    </h1>
+
+    <button class="custom-button" (click)="repetir()">Repetir</button>
+
+    <div class="gif-container">
+        <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExbGY3ZHA1Y2o4Y3ExcmgxZ2dpZndhYXdtNDd1YnFvc2twYW80dHNuMiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/fsagdqskhUu8r61sWy/giphy.gif" alt="Gif divertido" width="200">
+        <img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExMWhreGJheWRqOW1ueHlqbGhiMTBreHozMm1yajZiajFzanpkYXN4eSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/8XwtXLnEKbaBwm25Bt/giphy.gif" alt="Gif divertido" width="200">
+        <img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExMTRybXY0YmZndmZkYzRnNXFrMGQ1NWo0OGI4YTVuYnB3OHIxM3Y0YiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/v2t9f1HKIfrST91eyi/giphy.gif" alt="Gif divertido" width="200">
+    </div>
+  </div>
